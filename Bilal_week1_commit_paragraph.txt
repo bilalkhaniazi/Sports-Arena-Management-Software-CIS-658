@@ -1,0 +1,1 @@
+Week 1 commit by Bilal: This push includes Bilal's planned Week 1 phase deliverables for the Cross Courts project, with work completed in alignment with team scope and weekly milestones. The updates are organized to integrate cleanly with the shared codebase, preserve existing functionality, and keep the project ready for the next weekly phase and final combined submission.

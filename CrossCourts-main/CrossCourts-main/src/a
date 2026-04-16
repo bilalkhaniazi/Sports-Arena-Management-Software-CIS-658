@@ -1,0 +1,74 @@
+ {/* <Modal
+        isOpen={deleteOpen}
+        btnText={'Cancel'}
+        color={'bg-danger'}
+        onClose={() => setDeleteOpen(false)}
+        title="Booking Cancelation"
+        onSubmit={onSubmit}
+      >
+        <p>Are you sure you want to cancel this booking slot?</p>
+      </Modal>
+      <Modal
+        isOpen={editOpen}
+        btnText={'Update'}
+        color={'bg-warning'}
+        onClose={() => setEditOpen(false)}
+        title="Edit Booking"
+        onSubmit={onSubmit}
+      >
+        <div>
+          <p>
+            <strong>Slot:</strong> (12:00 AM – 05:00 AM)
+          </p>
+          <p>
+            <strong>Date:</strong> Friday, January 3, 2025
+          </p>
+
+          <div className="mt-5">
+            <label className="mb-2 block text-black dark:text-white">
+              Name
+            </label>
+            <input
+              type="text"
+              placeholder="Enter Name"
+              value={'Hamza Zia'}
+              className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent py-3 px-5 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+            />
+          </div>
+
+          <div className="mt-5">
+            <label className="mb-2 block text-black dark:text-white">
+              Phone
+            </label>
+            <input
+              type="text"
+              value={'0325-8168969'}
+              placeholder="0300-0000000"
+              className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent py-3 px-5 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+            />
+          </div>
+
+          <div className="mt-5">
+            <label className="mb-2 block text-black dark:text-white">
+              Email
+            </label>
+            <input
+              type="text"
+              value={'tectatechnologies@gmail.com'}
+              placeholder="example@gmail.com"
+              className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent py-3 px-5 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+            />
+          </div>
+          <div className="mt-5">
+            <label className="mb-2 block text-black dark:text-white">
+              Price
+            </label>
+            <input
+              type="text"
+              value={5000}
+              placeholder="Enter Price"
+              className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent py-3 px-5 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+            />
+          </div>
+        </div>
+      </Modal> */}
