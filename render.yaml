@@ -1,0 +1,37 @@
+services:
+  - type: web
+    name: cross-courts-api
+    env: node
+    rootDir: cross_courts_backend/backend
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    plan: free
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: PORT
+        value: 10000
+      - key: USE_FIREBASE_ONLY
+        value: "true"
+      - key: USE_FIREBASE_ARENA_READS
+        value: "true"
+      - key: USE_FIREBASE_BOOKING_READS
+        value: "true"
+      - key: USE_FIREBASE_AUTH
+        value: "true"
+      - key: USE_FIREBASE_COURTS
+        value: "true"
+      - key: USE_FIREBASE_OPERATIONS
+        value: "true"
+
+  - type: web
+    name: cross-courts-web
+    env: static
+    rootDir: CrossCourts-main/CrossCourts-main
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    plan: free
+    envVars:
+      - key: VITE_API_ORIGIN
+        value: https://cross-courts-api.onrender.com

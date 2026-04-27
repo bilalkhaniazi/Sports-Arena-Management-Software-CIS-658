@@ -129,3 +129,38 @@ Frontend (`CrossCourts-main/CrossCourts-main`):
 - If `npm` is not recognized, reinstall Node.js and restart terminal.
 - If backend cannot connect to DB, verify `DB_HOST`, `DB_USER`, `DB_PASSWORD`, and `DB_NAME` in `.env`.
 - If ports are busy, change backend `PORT` in `.env` and restart.
+
+## Deploy To A Free Public URL (Render)
+
+This repo now includes `render.yaml` for one-click deployment on [Render](https://render.com/) free tier.
+
+### What gets deployed
+
+- `cross-courts-api` (Node backend)
+- `cross-courts-web` (static React frontend)
+
+### Before you deploy
+
+1. Create a Firebase project and service account JSON (recommended for free hosting).
+2. In Render, add backend environment variables from `cross_courts_backend/backend/.env.example`.
+3. Set Firebase flags to true (already included in `render.yaml`) and upload your service account JSON (or map it using a secure file path setup).
+4. Set a strong `JWT_SECRET`.
+
+### Deploy steps
+
+1. Push this repository to GitHub.
+2. In Render dashboard, click **New +** -> **Blueprint**.
+3. Select your repo. Render reads `render.yaml` and creates both services.
+4. Wait for deploy finish, then open:
+   - Frontend URL (public app)
+   - Backend URL (API)
+5. In `cross-courts-web` service settings, confirm:
+   - `VITE_API_ORIGIN=https://cross-courts-api.onrender.com`
+6. Redeploy frontend if you changed env vars.
+
+### Local vs hosted API base URL
+
+- Local: frontend continues using `http://localhost:5000`
+- Hosted: set `VITE_API_ORIGIN` in frontend service
+
+The frontend runtime now rewrites any legacy `http://localhost:5000/...` calls to `VITE_API_ORIGIN` automatically in production.
