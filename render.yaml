@@ -31,7 +31,6 @@ services:
     rootDir: CrossCourts-main/CrossCourts-main
     buildCommand: npm install && npm run build
     staticPublishPath: dist
-    plan: free
     envVars:
       - key: VITE_API_ORIGIN
         value: https://cross-courts-api.onrender.com
